@@ -45,9 +45,9 @@
 	"deps/rapidjson-0.11/reader.h",
 	"deps/rapidjson-0.11/stringbuffer.h",
 	"deps/rapidjson-0.11/writer.h",
-	"deps/rapidjson-0.11/pow10.h",
-	"deps/rapidjson-0.11/stack.h",
-	"deps/rapidjson-0.11/strfunc.h",
+	"deps/rapidjson-0.11/internal/pow10.h",
+	"deps/rapidjson-0.11/internal/stack.h",
+	"deps/rapidjson-0.11/internal/strfunc.h",
 	"iOS/OpenCCService.{h,mm}"
   ],
   "resources": [
