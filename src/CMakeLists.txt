@@ -16,6 +16,7 @@ set(
   Converter.hpp
   DartsDict.hpp
   Dict.hpp
+  DictConverter.hpp
   DictEntry.hpp
   DictGroup.hpp
   Exception.hpp
@@ -43,6 +44,7 @@ set(
   Converter.cpp
   DartsDict.cpp
   Dict.cpp
+  DictConverter.cpp
   DictEntry.cpp
   DictGroup.cpp
   MaxMatchSegmentation.cpp
@@ -54,7 +56,8 @@ set(
   UTF8Util.cpp
 )
 
-add_library(libopencc ${LIBOPENCC_SOURCES})
+add_library(libopencc ${LIBOPENCC_SOURCES} ${LIBOPENCC_HEADERS})
+source_group(libopencc FILES ${LIBOPENCC_SOURCES} ${LIBOPENCC_HEADERS})
 
 GENERATE_EXPORT_HEADER(
   libopencc

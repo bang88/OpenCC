@@ -135,7 +135,7 @@ DartsDictPtr DartsDict::NewFromDict(const Dict& thatDict) {
   for (size_t i = 0; i < lexiconCount; i++) {
     const DictEntry* entry = lexicon->At(i);
     keys[i] = entry->Key();
-    maxLength = std::max(entry->KeyLength(), maxLength);
+    maxLength = (std::max)(entry->KeyLength(), maxLength);
   }
   doubleArray->build(lexicon->Length(), &keys[0]);
   dict->lexicon = lexicon;
@@ -154,7 +154,6 @@ void DartsDict::SerializeToFile(FILE* fp) const {
   fwrite(&dartsSize, sizeof(size_t), 1, fp);
   fwrite(dict.array(), sizeof(char), dartsSize, fp);
 
-  auto internal = this->internal;
   internal->binary.reset(new BinaryDict(lexicon));
   internal->binary->SerializeToFile(fp);
 }
